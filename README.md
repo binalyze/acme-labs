@@ -1,397 +1,133 @@
 # AIR Lab Environment
 
-A comprehensive Docker Compose environment for creating a multi-container lab setup with workstations, servers, and business applications. This environment provides a complete infrastructure for testing, development, and learning purposes.
+A comprehensive Docker Compose environment for creating a multi-container lab setup with workstations, servers, and applications.
 
 ## Overview
 
 This project provides a containerized lab environment with:
 - **10 Ubuntu Workstation containers** for general testing and development
-- **15 Debian-based Server containers** providing various infrastructure services
-- **5 Business Application containers** running modern open-source applications
+- **Web servers** for hosting applications
+- **Multiple database systems** for data storage
+- **Message queuing** for distributed applications
+- **Enterprise applications** for real-world scenarios
 
-Perfect for:
-- **Development and testing** across multiple environments
-- **Learning** server administration and application deployment
-- **Proof of concepts** and prototyping
-- **Load testing** and performance analysis
-- **Security testing** and penetration testing labs
+Perfect for development, testing, learning, and proof of concepts.
 
-## Environment Components
+## Services
 
-### Workstation Containers (Ubuntu-based)
-- **air-workstation-1** through **air-workstation-10**
-- Ubuntu latest with privileged access
-- Custom deployment script execution
-- Isolated environments for testing
+### Workstations (10 containers)
+- **workstation-1** to **workstation-10** - Ubuntu-based development environments
 
-### Server Containers (Debian-based)
-- **air-server-nginx** - Nginx web server (ports 8080, 8443)
-- **air-server-apache** - Apache HTTP server (port 8081)
-- **air-server-tomcat** - Apache Tomcat application server (port 8082)
-- **air-server-postgresql** - PostgreSQL database (port 5432)
-- **air-server-mysql** - MySQL database (port 3306)
-- **air-server-redis** - Redis cache/data store (port 6379)
-- **air-server-memcached** - Memcached caching system (port 11211)
-- **air-server-mongodb** - MongoDB NoSQL database (port 27017)
-- **air-server-rabbitmq** - RabbitMQ message broker with management UI (ports 5672, 15672)
-- **air-server-fileserver** - HTTP static file server (port 8095)
-- **air-server-mailserver** - Complete mail server solution (ports 25, 143, 587, 993)
-- **air-server-ldap** - OpenLDAP directory server (ports 389, 636)
-- **air-server-dns** - BIND9 DNS server (ports 53, 953)
-- **air-server-time** - NTP time synchronization server (port 123)
-- **air-server-perl** - Perl application server with HTTP interface (port 8096)
+### Web Servers
+- **nginx** - Web server (ports 8080, 8443)
+- **httpd** - Apache HTTP server (port 8081)
+- **tomcat** - Java application server (port 8082)
 
-### Business Application Containers
-- **air-app-nextcloud** - File sharing and collaboration platform (port 8085)
-- **air-app-grafana** - Monitoring and visualization (port 8087)
-- **air-app-wikijs** - Modern wiki platform (port 8090)
-- **air-app-keycloak** - Identity and access management (port 8092)
-- **air-app-portainer** - Container management UI (ports 8093, 8094)
+### Databases
+- **mysql** - MySQL database (port 3306)
+- **postgres** - PostgreSQL database (port 5432)
+- **mongo** - MongoDB NoSQL database (port 27017)
+- **redis** - In-memory data store (port 6379)
+- **cassandra** - Distributed NoSQL database (ports 9042, 9160)
 
-## Prerequisites
+### Message Queue
+- **rabbitmq** - Message broker with web UI (ports 5672, 15672)
 
-- Docker and Docker Compose installed
-- Sufficient system resources (30+ containers require adequate CPU/memory)
-- At least 8GB RAM and 4+ CPU cores recommended
-- 20+ GB available disk space
+### Monitoring
+- **grafana** - Visualization platform (port 3000)
+
+### Applications
+- **wordpress** - CMS platform (port 8087)
+- **nextcloud** - File sharing platform (port 8088)
+- **ghost** - Blogging platform (port 8089)
 
 ## Quick Start
 
-1. **Clone this repository**
-   ```bash
-   git clone <repository-url>
-   cd air-lab-environment
-   ```
-
-2. **Create your environment configuration (if using workstations)**
-   ```bash
-   # Only needed if you plan to use the workstation deployment functionality
-   cp .env.local.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-3. **Start all containers**
+1. **Start all services**
    ```bash
    docker-compose up -d
    ```
 
-4. **Monitor startup progress**
+2. **Check status**
+   ```bash
+   docker-compose ps
+   ```
+
+3. **View logs**
    ```bash
    docker-compose logs -f
    ```
 
-## Usage
+## Access Services
 
-### Starting the Environment
-
-```bash
-# Start all containers
-docker-compose up -d
-
-# Start only workstations
-docker-compose up -d $(docker-compose config --services | grep workstation)
-
-# Start only servers
-docker-compose up -d $(docker-compose config --services | grep server)
-
-# Start only applications
-docker-compose up -d $(docker-compose config --services | grep app)
-
-# Start specific containers
-docker-compose up -d air-server-nginx air-server-mysql air-app-nextcloud
-```
-
-### Accessing Services
-
-Once started, services are available at:
-
-**Web Servers:**
-- Nginx: http://localhost:8080, https://localhost:8443
+**Web Services:**
+- Nginx: http://localhost:8080
 - Apache: http://localhost:8081
 - Tomcat: http://localhost:8082
-- File Server: http://localhost:8095
-- Perl Server: http://localhost:8096
 
 **Databases:**
-- PostgreSQL: localhost:5432 (user: airlab, password: airlab123)
-- MySQL: localhost:3306 (user: airlab, password: airlab123)
-- MongoDB: localhost:27017 (user: airlab, password: airlab123)
-
-**Caching & Messaging:**
+- MySQL: localhost:3306
+- PostgreSQL: localhost:5432
+- MongoDB: localhost:27017
 - Redis: localhost:6379
-- Memcached: localhost:11211
-- RabbitMQ: localhost:5672, Management UI: http://localhost:15672
+- Cassandra: localhost:9042
 
-**Mail & Directory Services:**
-- Mail Server: SMTP:25, IMAP:143, Submission:587, IMAPS:993
-- LDAP: localhost:389, LDAPS:636 (admin password: airlab123)
+**Applications:**
+- RabbitMQ UI: http://localhost:15672
+- Grafana: http://localhost:3000
+- WordPress: http://localhost:8087
+- Nextcloud: http://localhost:8088
+- Ghost: http://localhost:8089
 
-**Network Services:**
-- DNS Server: localhost:53 (UDP/TCP), RNDC:953 (management)
-- Time Server (NTP): localhost:123 (UDP)
+## Default Credentials
 
-**Business Applications:**
-- Nextcloud: http://localhost:8085
-- Grafana: http://localhost:8087 (admin: airlab/airlab123)
-- Wiki.js: http://localhost:8090
-- Keycloak: http://localhost:8092 (admin: airlab/airlab123)
-- Portainer: http://localhost:8093, https://localhost:8094
+Most services use:
+- **Username:** airlab
+- **Password:** airlab123
 
-### Container Management
+## Container Management
 
 ```bash
-# View all container status
-docker-compose ps
+# Start specific services  
+docker-compose up -d nginx mysql wordpress
 
-# View logs from all containers
-docker-compose logs -f
+# View service logs
+docker-compose logs -f grafana
 
-# View logs from specific container
-docker-compose logs -f air-app-nextcloud
+# Access a workstation
+docker-compose exec workstation-1 /bin/bash
 
-# Execute commands in a container
-docker-compose exec air-workstation-1 /bin/bash
-docker-compose exec air-server-nginx /bin/bash
+# Restart a service
+docker-compose restart nginx
 
-# Restart specific services
-docker-compose restart air-server-postgresql air-app-grafana
-
-# Stop all containers
+# Stop all services
 docker-compose down
-
-# Stop and remove all data
-docker-compose down -v
 ```
 
-## Container Details
+## Configuration
 
-### Container Features
-- **Custom hostnames**: Each container has a hostname matching its service name
-- **Persistent data**: Databases and applications use Docker volumes for data persistence
-- **Auto-restart**: Containers restart automatically unless manually stopped
-- **Integrated networking**: All containers can communicate with each other by hostname
-- **Deploy script execution**: All containers execute your custom deploy.sh script on startup
-
-### Default Credentials
-Most services use consistent default credentials:
-- **Username**: airlab
-- **Password**: airlab123
-
-### Data Persistence
-The following data is persisted across container restarts:
-- PostgreSQL data
-- MySQL data
-- MongoDB data
-- Redis data
-- RabbitMQ data
-- File server data
-- Mail server data and configuration
-- LDAP directory data
-- DNS zone files and configuration
-- Perl application data
-- All application data (Nextcloud, Grafana, Wiki.js, etc.)
-
-## Development and Customization
-
-### Adding New Services
-
-To add a new service, edit `docker-compose.yml`:
-
-```yaml
-air-server-newservice:
-  image: newservice:latest
-  container_name: air-server-newservice
-  hostname: air-server-newservice
-  ports:
-    - "8097:8080"
-  environment:
-    - ENV_VAR=value
-  volumes:
-    - newservice_data:/data
-    - ./deploy.sh:/app/deploy.sh:ro
-    - ./.env.local:/app/.env.local:ro
-  command: /bin/bash -c "bash /app/deploy.sh & service-start-command"
-  restart: unless-stopped
-```
-
-Don't forget to add the volume to the volumes section:
-
-```yaml
-volumes:
-  # ... existing volumes ...
-  newservice_data:
-```
-
-### Customizing Configurations
-
-- **Environment variables**: Modify the `environment` sections in `docker-compose.yml`
-- **Port mappings**: Change the `ports` mappings to avoid conflicts
-- **Resource limits**: Add `deploy.resources` sections for memory/CPU limits
-- **Deploy script**: Modify `deploy.sh` to customize what gets executed on each container
+- **Custom deployment:** Edit `deploy.sh` for service customization
+- **Environment variables:** Create `.env.local` for configuration
+- **Data persistence:** All data is stored in Docker volumes
 
 ## System Requirements
 
-### Recommended Specifications
-- **CPU**: 8+ cores
-- **RAM**: 16+ GB
-- **Storage**: 50+ GB SSD
-- **Network**: Stable internet connection
+- **Minimum:** 8GB RAM, 4 CPU cores, 20GB storage
+- **Recommended:** 16GB RAM, 8 CPU cores, 50GB SSD
 
-### Resource Usage (Approximate)
-- **Workstations**: 100-200 MB RAM each
-- **Servers**: 200-500 MB RAM each
-- **Applications**: 300-1000 MB RAM each
-- **Total**: 10-14 GB RAM when all containers are running
+## Container Hostnames
 
-## Troubleshooting
+All containers use capitalized hostnames:
+- Workstations: WORKSTATION-1 to WORKSTATION-10
+- Services: NGINX, HTTPD, TOMCAT, MYSQL, POSTGRES, MONGO, REDIS, CASSANDRA, RABBITMQ, GRAFANA, WORDPRESS, NEXTCLOUD, GHOST
 
-### Common Issues
+## Data Persistence
 
-**Port conflicts:**
-```bash
-# Check if ports are already in use
-netstat -tulpn | grep :8080
-
-# Modify port mappings in docker-compose.yml if needed
-```
-
-**Container startup failures:**
-```bash
-# Check container logs
-docker-compose logs container-name
-
-# Check system resources
-docker stats
-```
-
-**Database connection issues:**
-```bash
-# Ensure database containers are running
-docker-compose ps | grep postgres
-
-# Check database logs
-docker-compose logs air-server-postgresql
-```
-
-**Application not accessible:**
-```bash
-# Verify container is running
-docker-compose ps
-
-# Check port mapping
-docker-compose port air-app-nextcloud 80
-```
-
-**Deploy script permission issues:**
-```bash
-# Check if deploy.sh is executable on host
-chmod +x deploy.sh
-
-# Or check container logs for permission errors
-docker-compose logs air-server-nginx | grep deploy
-```
-
-**DNS resolution issues:**
-```bash
-# Test DNS server functionality
-dig @localhost example.com
-
-# Check DNS server logs
-docker-compose logs air-server-dns
-```
-
-**Time synchronization issues:**
-```bash
-# Check NTP server status
-ntpq -p localhost
-
-# Verify time server logs
-docker-compose logs air-server-time
-```
-
-### Performance Optimization
-
-```bash
-# Start only needed services
-docker-compose up -d air-server-nginx air-server-postgresql air-app-nextcloud
-
-# Monitor resource usage
-docker stats
-
-# Clean up unused resources
-docker system prune -f
-docker volume prune -f
-```
-
-## Security Considerations
-
-- **Default credentials**: Change default passwords in production
-- **Network exposure**: Services are exposed on localhost only by default
-- **Privileged containers**: Workstation containers run in privileged mode
-- **Volume mounts**: Some containers mount Docker socket (Portainer)
-- **Mail server security**: Mail server includes spam protection and security features
-- **LDAP security**: LDAP server supports both encrypted and unencrypted connections
-- **DNS security**: DNS server provides authoritative and recursive resolution
-- **Time server security**: NTP server uses SYS_TIME capability for system time management
-
-For production use:
-- Use custom credentials for all services
-- Implement proper network segmentation
-- Regular security updates
-- Monitor container logs
-- Configure proper SSL/TLS certificates
-- Implement proper firewall rules
-- Secure DNS zone configurations
-- Configure NTP authentication if needed
-
-## Service Integration
-
-### DNS Integration
-The DNS server (air-server-dns) provides name resolution for the lab environment:
-- **Authoritative DNS**: Configure custom zones for lab domains
-- **Recursive DNS**: Resolve external domain names
-- **RNDC Management**: Use port 953 for DNS server control
-- **Zone Files**: Stored in persistent volumes
-
-### LDAP Integration
-The LDAP server (air-server-ldap) can be used for authentication with other services:
-- **Domain**: airlab.local
-- **Base DN**: dc=airlab,dc=local
-- **Admin User**: cn=admin,dc=airlab,dc=local
-- **Admin Password**: airlab123
-
-### Mail Server Features
-The mail server includes:
-- **Anti-spam**: SpamAssassin enabled
-- **Anti-virus**: ClamAV scanning
-- **Security**: Fail2Ban protection
-- **Greylisting**: Postgrey enabled
-
-### Time Synchronization
-The NTP server (air-server-time) provides:
-- **Network Time Protocol**: Accurate time synchronization
-- **External Sync**: Synchronizes with pool.ntp.org
-- **Local Network**: Serves time to other lab containers
-
-### Perl Development Environment
-The Perl server (air-server-perl) offers:
-- **HTTP Server**: Built-in web server for Perl applications
-- **Development Environment**: Full Perl 5.38 runtime
-- **Application Hosting**: Serve Perl web applications
-- **Persistent Storage**: Store applications in `/app` directory
-
-### Monitoring Integration
-Use Grafana (air-app-grafana) to monitor:
-- Container metrics via Portainer
-- DNS query statistics
-- NTP synchronization status
-- Application metrics from various services
-
-## Support and Contributing
-
-- **Issues**: Report issues with specific container logs and system information
-- **Features**: Submit feature requests for additional services or improvements
-- **Contributions**: Pull requests welcome for additional services or improvements
+The following data persists across restarts:
+- Database data (MySQL, PostgreSQL, MongoDB, Redis, Cassandra)
+- Application data (WordPress, Nextcloud, Ghost, Grafana)
+- Web server content (Nginx, Apache, Tomcat)
+- Message queue data (RabbitMQ)
 
 ## License
 

@@ -1,9 +1,9 @@
 services:
   # Workstation containers (ubuntu based)
-  air-workstation-1:
+  workstation-1:
     image: ubuntu:latest
-    container_name: air-workstation-1
-    hostname: air-workstation-1
+    container_name: workstation-1
+    hostname: WORKSTATION-1
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -11,10 +11,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-2:
+  workstation-2:
     image: ubuntu:latest
-    container_name: air-workstation-2
-    hostname: air-workstation-2
+    container_name: workstation-2
+    hostname: WORKSTATION-2
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -22,10 +22,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-3:
+  workstation-3:
     image: ubuntu:latest
-    container_name: air-workstation-3
-    hostname: air-workstation-3
+    container_name: workstation-3
+    hostname: WORKSTATION-3
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -33,10 +33,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-4:
+  workstation-4:
     image: ubuntu:latest
-    container_name: air-workstation-4
-    hostname: air-workstation-4
+    container_name: workstation-4
+    hostname: WORKSTATION-4
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -44,10 +44,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-5:
+  workstation-5:
     image: ubuntu:latest
-    container_name: air-workstation-5
-    hostname: air-workstation-5
+    container_name: workstation-5
+    hostname: WORKSTATION-5
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -55,10 +55,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-6:
+  workstation-6:
     image: ubuntu:latest
-    container_name: air-workstation-6
-    hostname: air-workstation-6
+    container_name: workstation-6
+    hostname: WORKSTATION-6
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -66,10 +66,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-7:
+  workstation-7:
     image: ubuntu:latest
-    container_name: air-workstation-7
-    hostname: air-workstation-7
+    container_name: workstation-7
+    hostname: WORKSTATION-7
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -77,10 +77,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-8:
+  workstation-8:
     image: ubuntu:latest
-    container_name: air-workstation-8
-    hostname: air-workstation-8
+    container_name: workstation-8
+    hostname: WORKSTATION-8
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -88,10 +88,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-9:
+  workstation-9:
     image: ubuntu:latest
-    container_name: air-workstation-9
-    hostname: air-workstation-9
+    container_name: workstation-9
+    hostname: WORKSTATION-9
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -99,10 +99,10 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  air-workstation-10:
+  workstation-10:
     image: ubuntu:latest
-    container_name: air-workstation-10
-    hostname: air-workstation-10
+    container_name: workstation-10
+    hostname: WORKSTATION-10
     privileged: true
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
@@ -110,36 +110,38 @@ services:
     command: /bin/bash /app/deploy.sh
     restart: unless-stopped
     
-  # Server containers (debian based)
-  air-server-nginx:
+  # Web Servers & Application Servers
+  nginx:
     image: nginx:latest
-    container_name: air-server-nginx
-    hostname: air-server-nginx
+    container_name: nginx
+    hostname: NGINX
     ports:
       - "8080:80"
       - "8443:443"
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & nginx -g 'daemon off;'"
+      - nginx_data:/var/www/html
+    command: /bin/bash -c "bash /app/deploy.sh && nginx -g 'daemon off;'"
     restart: unless-stopped
     
-  air-server-apache:
+  httpd:
     image: httpd:latest
-    container_name: air-server-apache
-    hostname: air-server-apache
+    container_name: httpd
+    hostname: HTTPD
     ports:
       - "8081:80"
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & httpd-foreground"
+      - httpd_data:/usr/local/apache2/htdocs
+    command: /bin/bash -c "bash /app/deploy.sh && httpd-foreground"
     restart: unless-stopped
     
-  air-server-tomcat:
+  tomcat:
     image: tomcat:latest
-    container_name: air-server-tomcat
-    hostname: air-server-tomcat
+    container_name: tomcat
+    hostname: TOMCAT
     ports:
       - "8082:8080"
     environment:
@@ -147,30 +149,15 @@ services:
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & catalina.sh run"
+      - tomcat_data:/usr/local/tomcat/webapps
+    command: /bin/bash -c "bash /app/deploy.sh && catalina.sh run"
     restart: unless-stopped
-    
-  air-server-postgresql:
-    image: postgres:latest
-    container_name: air-server-postgresql
-    hostname: air-server-postgresql
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_DB=airlab
-      - POSTGRES_USER=airlab
-      - POSTGRES_PASSWORD=airlab123
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & docker-entrypoint.sh postgres"
-    restart: unless-stopped
-    
-  air-server-mysql:
+        
+  # Databases    
+  mysql:
     image: mysql:latest
-    container_name: air-server-mysql
-    hostname: air-server-mysql
+    container_name: mysql
+    hostname: MYSQL
     ports:
       - "3306:3306"
     environment:
@@ -179,41 +166,33 @@ services:
       - MYSQL_USER=airlab
       - MYSQL_PASSWORD=airlab123
     volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
       - mysql_data:/var/lib/mysql
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & docker-entrypoint.sh mysqld"
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh mysqld"
     restart: unless-stopped
     
-  air-server-redis:
-    image: redis:latest
-    container_name: air-server-redis
-    hostname: air-server-redis
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    hostname: POSTGRES
     ports:
-      - "6379:6379"
-    volumes:
-      - redis_data:/data
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & redis-server --appendonly yes"
-    restart: unless-stopped
-    
-  air-server-memcached:
-    image: memcached:latest
-    container_name: air-server-memcached
-    hostname: air-server-memcached
-    ports:
-      - "11211:11211"
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=airlab
+      - POSTGRES_USER=airlab
+      - POSTGRES_PASSWORD=airlab123
     volumes:
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & memcached -m 64"
+      - postgres_data:/var/lib/postgresql/data
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh postgres"
     restart: unless-stopped
     
-  air-server-mongodb:
+  mongo:
     image: mongo:latest
-    container_name: air-server-mongodb
-    hostname: air-server-mongodb
+    container_name: mongo
+    hostname: MONGO
     ports:
       - "27017:27017"
     environment:
@@ -221,17 +200,48 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=airlab123
       - MONGO_INITDB_DATABASE=airlab
     volumes:
-      - mongodb_data:/data/db
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & docker-entrypoint.sh mongod"
+      - mongo_data:/data/db
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh mongod"
     restart: unless-stopped
     
-
-  air-server-rabbitmq:
+  redis:
+    image: redis:latest
+    container_name: redis
+    hostname: REDIS
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+      - redis_data:/data
+    command: /bin/bash -c "bash /app/deploy.sh && redis-server --appendonly yes"
+    restart: unless-stopped
+        
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    hostname: CASSANDRA
+    ports:
+      - "9042:9042"
+      - "9160:9160"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=AirLab
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+      - cassandra_data:/var/lib/cassandra
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh cassandra -f"
+    restart: unless-stopped
+    
+  # Message Queues & Streaming
+  rabbitmq:
     image: rabbitmq:management
-    container_name: air-server-rabbitmq
-    hostname: air-server-rabbitmq
+    container_name: rabbitmq
+    hostname: RABBITMQ
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -239,245 +249,85 @@ services:
       - RABBITMQ_DEFAULT_USER=airlab
       - RABBITMQ_DEFAULT_PASS=airlab123
     volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
       - rabbitmq_data:/var/lib/rabbitmq
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & docker-entrypoint.sh rabbitmq-server"
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh rabbitmq-server"
     restart: unless-stopped
-    
-  air-server-fileserver:
-    image: halverneus/static-file-server:latest
-    container_name: air-server-fileserver
-    hostname: air-server-fileserver
-    ports:
-      - "8095:8080"
-    environment:
-      - FOLDER=/web
-      - PORT=8080
-    volumes:
-      - fileserver_data:/web
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /serve"
-    restart: unless-stopped
-    
-  air-server-mailserver:
-    image: mailserver/docker-mailserver:latest
-    container_name: air-server-mailserver
-    hostname: air-server-mailserver
-    ports:
-      - "25:25"
-      - "143:143"
-      - "587:587"
-      - "993:993"
-    environment:
-      - ENABLE_SPAMASSASSIN=1
-      - ENABLE_CLAMAV=1
-      - ENABLE_FAIL2BAN=1
-      - ENABLE_POSTGREY=1
-      - ONE_DIR=1
-      - DMS_DEBUG=0
-    volumes:
-      - mailserver_data:/var/mail
-      - mailserver_state:/var/mail-state
-      - mailserver_logs:/var/log/mail
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /usr/local/bin/start-mailserver.sh"
-    restart: unless-stopped
-    cap_add:
-      - NET_ADMIN
-      - SYS_PTRACE
-    
-  air-server-ldap:
-    image: osixia/openldap:latest
-    container_name: air-server-ldap
-    hostname: air-server-ldap
-    ports:
-      - "389:389"
-      - "636:636"
-    environment:
-      - LDAP_LOG_LEVEL=256
-      - LDAP_ORGANISATION=AirLab
-      - LDAP_DOMAIN=airlab.local
-      - LDAP_BASE_DN=dc=airlab,dc=local
-      - LDAP_ADMIN_PASSWORD=airlab123
-      - LDAP_CONFIG_PASSWORD=airlab123
-      - LDAP_READONLY_USER=false
-    volumes:
-      - ldap_data:/var/lib/ldap
-      - ldap_config:/etc/ldap/slapd.d
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /container/tool/run"
-    restart: unless-stopped
-    
-  air-server-dns:
-    image: ubuntu/bind9:latest
-    container_name: air-server-dns
-    hostname: air-server-dns
-    ports:
-      - "53:53/udp"
-      - "53:53/tcp"
-      - "953:953/tcp"
-    environment:
-      - BIND9_USER=bind
-      - TZ=UTC
-    volumes:
-      - dns_data:/var/lib/bind
-      - dns_config:/etc/bind
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & named -g -c /etc/bind/named.conf"
-    restart: unless-stopped
-    
-  air-server-time:
-    image: cturra/ntp:latest
-    container_name: air-server-time
-    hostname: air-server-time
-    ports:
-      - "123:123/udp"
-    environment:
-      - NTP_SERVERS=pool.ntp.org
-      - LOG_LEVEL=0
-    volumes:
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & ntpd -d -n -p /var/run/ntpd.pid"
-    restart: unless-stopped
-    cap_add:
-      - SYS_TIME
-    
-  air-server-perl:
-    image: perl:latest
-    container_name: air-server-perl
-    hostname: air-server-perl
-    ports:
-      - "8096:8080"
-    environment:
-      - PERL_VERSION=5.38
-    volumes:
-      - perl_data:/app
-      - ./deploy.sh:/deploy.sh:ro
-      - ./.env.local:/.env.local:ro
-    command: /bin/bash -c "bash /deploy.sh & perl -MHTTP::Server::Brick -e 'my $$server = HTTP::Server::Brick->new(port => 8080); $$server->mount(\"/\" => { path => \"/app\" }); $$server->start;'"
-    working_dir: /app
-    restart: unless-stopped
-    
-  # Business Application containers
-
-  air-app-nextcloud:
-    image: nextcloud:latest
-    container_name: air-app-nextcloud
-    hostname: air-app-nextcloud
-    ports:
-      - "8085:80"
-    environment:
-      - MYSQL_HOST=air-server-mysql
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=airlab
-      - MYSQL_PASSWORD=airlab123
-    volumes:
-      - nextcloud_data:/var/www/html
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & apache2-foreground"
-    restart: unless-stopped
-    
-
-  air-app-grafana:
+            
+  # Monitoring & Logging    
+  grafana:
     image: grafana/grafana:latest
-    container_name: air-app-grafana
-    hostname: air-app-grafana
+    container_name: grafana
+    hostname: GRAFANA
     ports:
-      - "8087:3000"
+      - "3000:3000"
     environment:
       - GF_SECURITY_ADMIN_USER=airlab
       - GF_SECURITY_ADMIN_PASSWORD=airlab123
     volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
       - grafana_data:/var/lib/grafana
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /run.sh"
+    command: /bin/bash -c "bash /app/deploy.sh && /run.sh"
     restart: unless-stopped
-    
-
-
-  air-app-wikijs:
-    image: requarks/wiki:2
-    container_name: air-app-wikijs
-    hostname: air-app-wikijs
+                 
+  # Enterprise Applications
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud
+    hostname: NEXTCLOUD
     ports:
-      - "8090:3000"
+      - "8088:80"
     environment:
-      - DB_TYPE=postgres
-      - DB_HOST=air-server-postgresql
-      - DB_PORT=5432
-      - DB_USER=airlab
-      - DB_PASS=airlab123
-      - DB_NAME=wikijs
+      - MYSQL_HOST=mysql
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=airlab
+      - MYSQL_PASSWORD=airlab123
     volumes:
-      - wikijs_data:/wiki/data
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & node server"
+      - nextcloud_data:/var/www/html
+    command: /bin/bash -c "bash /app/deploy.sh && /entrypoint.sh apache2-foreground"
+    depends_on:
+      - mysql
     restart: unless-stopped
     
-
-  air-app-keycloak:
-    image: quay.io/keycloak/keycloak:latest
-    container_name: air-app-keycloak
-    hostname: air-app-keycloak
+  ghost:
+    image: ghost:latest
+    container_name: ghost
+    hostname: GHOST
     ports:
-      - "8092:8080"
+      - "8089:2368"
     environment:
-      - KEYCLOAK_ADMIN=airlab
-      - KEYCLOAK_ADMIN_PASSWORD=airlab123
-      - KC_DB=postgres
-      - KC_DB_URL=jdbc:postgresql://air-server-postgresql:5432/keycloak
-      - KC_DB_USERNAME=airlab
-      - KC_DB_PASSWORD=airlab123
+      - database__client=mysql
+      - database__connection__host=mysql
+      - database__connection__user=airlab
+      - database__connection__password=airlab123
+      - database__connection__database=ghost
+      - url=http://localhost:8089
     volumes:
-      - keycloak_data:/opt/keycloak/data
       - ./deploy.sh:/app/deploy.sh:ro
       - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /opt/keycloak/bin/kc.sh start-dev"
+      - ghost_data:/var/lib/ghost/content
+    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh node current/index.js"
+    depends_on:
+      - mysql
     restart: unless-stopped
-    
-  air-app-portainer:
-    image: portainer/portainer-ce:latest
-    container_name: air-app-portainer
-    hostname: air-app-portainer
-    ports:
-      - "8093:9000"
-      - "8094:9443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-    command: /bin/bash -c "bash /app/deploy.sh & /portainer"
-    restart: unless-stopped
-    
+
 volumes:
-  postgres_data:
+  nginx_data:
+  httpd_data:
+  tomcat_data:
   mysql_data:
+  postgres_data:
+  mongo_data:
   redis_data:
-  mongodb_data:
+  cassandra_data:
   rabbitmq_data:
-  fileserver_data:
-  mailserver_data:
-  mailserver_state:
-  mailserver_logs:
-  ldap_data:
-  ldap_config:
-  dns_data:
-  dns_config:
-  perl_data:
-  nextcloud_data:
+  zookeeper_data:
+  prometheus_data:
   grafana_data:
-  wikijs_data:
-  keycloak_data:
-  portainer_data:
-
-  
+  logstash_data:
+  nextcloud_data:
+  ghost_data:
