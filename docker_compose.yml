@@ -1,0 +1,2006 @@
+version: '3.8'
+
+services:
+  # Ubuntu containers (1-50)
+  air-ubuntu-1:
+    image: ubuntu:latest
+    container_name: air-ubuntu-1
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-2:
+    image: ubuntu:latest
+    container_name: air-ubuntu-2
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-3:
+    image: ubuntu:latest
+    container_name: air-ubuntu-3
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-4:
+    image: ubuntu:latest
+    container_name: air-ubuntu-4
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-5:
+    image: ubuntu:latest
+    container_name: air-ubuntu-5
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-6:
+    image: ubuntu:latest
+    container_name: air-ubuntu-6
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-7:
+    image: ubuntu:latest
+    container_name: air-ubuntu-7
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-8:
+    image: ubuntu:latest
+    container_name: air-ubuntu-8
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-9:
+    image: ubuntu:latest
+    container_name: air-ubuntu-9
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-10:
+    image: ubuntu:latest
+    container_name: air-ubuntu-10
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-11:
+    image: ubuntu:latest
+    container_name: air-ubuntu-11
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-12:
+    image: ubuntu:latest
+    container_name: air-ubuntu-12
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-13:
+    image: ubuntu:latest
+    container_name: air-ubuntu-13
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-14:
+    image: ubuntu:latest
+    container_name: air-ubuntu-14
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-15:
+    image: ubuntu:latest
+    container_name: air-ubuntu-15
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-16:
+    image: ubuntu:latest
+    container_name: air-ubuntu-16
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-17:
+    image: ubuntu:latest
+    container_name: air-ubuntu-17
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-18:
+    image: ubuntu:latest
+    container_name: air-ubuntu-18
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-19:
+    image: ubuntu:latest
+    container_name: air-ubuntu-19
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-20:
+    image: ubuntu:latest
+    container_name: air-ubuntu-20
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-21:
+    image: ubuntu:latest
+    container_name: air-ubuntu-21
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-22:
+    image: ubuntu:latest
+    container_name: air-ubuntu-22
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-23:
+    image: ubuntu:latest
+    container_name: air-ubuntu-23
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-24:
+    image: ubuntu:latest
+    container_name: air-ubuntu-24
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-25:
+    image: ubuntu:latest
+    container_name: air-ubuntu-25
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-26:
+    image: ubuntu:latest
+    container_name: air-ubuntu-26
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-27:
+    image: ubuntu:latest
+    container_name: air-ubuntu-27
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-28:
+    image: ubuntu:latest
+    container_name: air-ubuntu-28
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-29:
+    image: ubuntu:latest
+    container_name: air-ubuntu-29
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-30:
+    image: ubuntu:latest
+    container_name: air-ubuntu-30
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-31:
+    image: ubuntu:latest
+    container_name: air-ubuntu-31
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-32:
+    image: ubuntu:latest
+    container_name: air-ubuntu-32
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-33:
+    image: ubuntu:latest
+    container_name: air-ubuntu-33
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-34:
+    image: ubuntu:latest
+    container_name: air-ubuntu-34
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-35:
+    image: ubuntu:latest
+    container_name: air-ubuntu-35
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-36:
+    image: ubuntu:latest
+    container_name: air-ubuntu-36
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-37:
+    image: ubuntu:latest
+    container_name: air-ubuntu-37
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-38:
+    image: ubuntu:latest
+    container_name: air-ubuntu-38
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-39:
+    image: ubuntu:latest
+    container_name: air-ubuntu-39
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-40:
+    image: ubuntu:latest
+    container_name: air-ubuntu-40
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-41:
+    image: ubuntu:latest
+    container_name: air-ubuntu-41
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-42:
+    image: ubuntu:latest
+    container_name: air-ubuntu-42
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-43:
+    image: ubuntu:latest
+    container_name: air-ubuntu-43
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-44:
+    image: ubuntu:latest
+    container_name: air-ubuntu-44
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-45:
+    image: ubuntu:latest
+    container_name: air-ubuntu-45
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-46:
+    image: ubuntu:latest
+    container_name: air-ubuntu-46
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-47:
+    image: ubuntu:latest
+    container_name: air-ubuntu-47
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-48:
+    image: ubuntu:latest
+    container_name: air-ubuntu-48
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-49:
+    image: ubuntu:latest
+    container_name: air-ubuntu-49
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-ubuntu-50:
+    image: ubuntu:latest
+    container_name: air-ubuntu-50
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+
+  # Debian containers (51-100)
+  air-debian-51:
+    image: debian:latest
+    container_name: air-debian-51
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-52:
+    image: debian:latest
+    container_name: air-debian-52
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-53:
+    image: debian:latest
+    container_name: air-debian-53
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-54:
+    image: debian:latest
+    container_name: air-debian-54
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-55:
+    image: debian:latest
+    container_name: air-debian-55
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-56:
+    image: debian:latest
+    container_name: air-debian-56
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-57:
+    image: debian:latest
+    container_name: air-debian-57
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-58:
+    image: debian:latest
+    container_name: air-debian-58
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-59:
+    image: debian:latest
+    container_name: air-debian-59
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-60:
+    image: debian:latest
+    container_name: air-debian-60
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-61:
+    image: debian:latest
+    container_name: air-debian-61
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-62:
+    image: debian:latest
+    container_name: air-debian-62
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-63:
+    image: debian:latest
+    container_name: air-debian-63
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-64:
+    image: debian:latest
+    container_name: air-debian-64
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-65:
+    image: debian:latest
+    container_name: air-debian-65
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-66:
+    image: debian:latest
+    container_name: air-debian-66
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-67:
+    image: debian:latest
+    container_name: air-debian-67
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-68:
+    image: debian:latest
+    container_name: air-debian-68
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-69:
+    image: debian:latest
+    container_name: air-debian-69
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-70:
+    image: debian:latest
+    container_name: air-debian-70
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-71:
+    image: debian:latest
+    container_name: air-debian-71
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-72:
+    image: debian:latest
+    container_name: air-debian-72
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-73:
+    image: debian:latest
+    container_name: air-debian-73
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-74:
+    image: debian:latest
+    container_name: air-debian-74
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-75:
+    image: debian:latest
+    container_name: air-debian-75
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-76:
+    image: debian:latest
+    container_name: air-debian-76
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-77:
+    image: debian:latest
+    container_name: air-debian-77
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-78:
+    image: debian:latest
+    container_name: air-debian-78
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-79:
+    image: debian:latest
+    container_name: air-debian-79
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-80:
+    image: debian:latest
+    container_name: air-debian-80
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-81:
+    image: debian:latest
+    container_name: air-debian-81
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-82:
+    image: debian:latest
+    container_name: air-debian-82
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-83:
+    image: debian:latest
+    container_name: air-debian-83
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-84:
+    image: debian:latest
+    container_name: air-debian-84
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-85:
+    image: debian:latest
+    container_name: air-debian-85
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-86:
+    image: debian:latest
+    container_name: air-debian-86
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-87:
+    image: debian:latest
+    container_name: air-debian-87
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-88:
+    image: debian:latest
+    container_name: air-debian-88
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-89:
+    image: debian:latest
+    container_name: air-debian-89
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-90:
+    image: debian:latest
+    container_name: air-debian-90
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-91:
+    image: debian:latest
+    container_name: air-debian-91
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-92:
+    image: debian:latest
+    container_name: air-debian-92
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-93:
+    image: debian:latest
+    container_name: air-debian-93
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-94:
+    image: debian:latest
+    container_name: air-debian-94
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-95:
+    image: debian:latest
+    container_name: air-debian-95
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-96:
+    image: debian:latest
+    container_name: air-debian-96
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-97:
+    image: debian:latest
+    container_name: air-debian-97
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-98:
+    image: debian:latest
+    container_name: air-debian-98
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-99:
+    image: debian:latest
+    container_name: air-debian-99
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-debian-100:
+    image: debian:latest
+    container_name: air-debian-100
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+
+  # CentOS containers (101-150)
+  air-centos-101:
+    image: centos:latest
+    container_name: air-centos-101
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-102:
+    image: centos:latest
+    container_name: air-centos-102
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-103:
+    image: centos:latest
+    container_name: air-centos-103
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-104:
+    image: centos:latest
+    container_name: air-centos-104
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-105:
+    image: centos:latest
+    container_name: air-centos-105
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-106:
+    image: centos:latest
+    container_name: air-centos-106
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-107:
+    image: centos:latest
+    container_name: air-centos-107
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-108:
+    image: centos:latest
+    container_name: air-centos-108
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-109:
+    image: centos:latest
+    container_name: air-centos-109
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-110:
+    image: centos:latest
+    container_name: air-centos-110
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-111:
+    image: centos:latest
+    container_name: air-centos-111
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-112:
+    image: centos:latest
+    container_name: air-centos-112
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-113:
+    image: centos:latest
+    container_name: air-centos-113
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-114:
+    image: centos:latest
+    container_name: air-centos-114
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-115:
+    image: centos:latest
+    container_name: air-centos-115
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-116:
+    image: centos:latest
+    container_name: air-centos-116
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-117:
+    image: centos:latest
+    container_name: air-centos-117
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-118:
+    image: centos:latest
+    container_name: air-centos-118
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-119:
+    image: centos:latest
+    container_name: air-centos-119
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-120:
+    image: centos:latest
+    container_name: air-centos-120
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-121:
+    image: centos:latest
+    container_name: air-centos-121
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-122:
+    image: centos:latest
+    container_name: air-centos-122
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-123:
+    image: centos:latest
+    container_name: air-centos-123
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-124:
+    image: centos:latest
+    container_name: air-centos-124
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-125:
+    image: centos:latest
+    container_name: air-centos-125
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-126:
+    image: centos:latest
+    container_name: air-centos-126
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-127:
+    image: centos:latest
+    container_name: air-centos-127
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-128:
+    image: centos:latest
+    container_name: air-centos-128
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-129:
+    image: centos:latest
+    container_name: air-centos-129
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-130:
+    image: centos:latest
+    container_name: air-centos-130
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-131:
+    image: centos:latest
+    container_name: air-centos-131
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-132:
+    image: centos:latest
+    container_name: air-centos-132
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-133:
+    image: centos:latest
+    container_name: air-centos-133
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-134:
+    image: centos:latest
+    container_name: air-centos-134
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-135:
+    image: centos:latest
+    container_name: air-centos-135
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-136:
+    image: centos:latest
+    container_name: air-centos-136
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-137:
+    image: centos:latest
+    container_name: air-centos-137
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-138:
+    image: centos:latest
+    container_name: air-centos-138
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-139:
+    image: centos:latest
+    container_name: air-centos-139
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-140:
+    image: centos:latest
+    container_name: air-centos-140
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-141:
+    image: centos:latest
+    container_name: air-centos-141
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-142:
+    image: centos:latest
+    container_name: air-centos-142
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-143:
+    image: centos:latest
+    container_name: air-centos-143
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-144:
+    image: centos:latest
+    container_name: air-centos-144
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-145:
+    image: centos:latest
+    container_name: air-centos-145
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-146:
+    image: centos:latest
+    container_name: air-centos-146
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-147:
+    image: centos:latest
+    container_name: air-centos-147
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-148:
+    image: centos:latest
+    container_name: air-centos-148
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-149:
+    image: centos:latest
+    container_name: air-centos-149
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-centos-150:
+    image: centos:latest
+    container_name: air-centos-150
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+
+  # Fedora containers (151-200)
+  air-fedora-151:
+    image: fedora:latest
+    container_name: air-fedora-151
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-152:
+    image: fedora:latest
+    container_name: air-fedora-152
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-153:
+    image: fedora:latest
+    container_name: air-fedora-153
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-154:
+    image: fedora:latest
+    container_name: air-fedora-154
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-155:
+    image: fedora:latest
+    container_name: air-fedora-155
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-156:
+    image: fedora:latest
+    container_name: air-fedora-156
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-157:
+    image: fedora:latest
+    container_name: air-fedora-157
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-158:
+    image: fedora:latest
+    container_name: air-fedora-158
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-159:
+    image: fedora:latest
+    container_name: air-fedora-159
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-160:
+    image: fedora:latest
+    container_name: air-fedora-160
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-161:
+    image: fedora:latest
+    container_name: air-fedora-161
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-162:
+    image: fedora:latest
+    container_name: air-fedora-162
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-163:
+    image: fedora:latest
+    container_name: air-fedora-163
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-164:
+    image: fedora:latest
+    container_name: air-fedora-164
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-165:
+    image: fedora:latest
+    container_name: air-fedora-165
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-166:
+    image: fedora:latest
+    container_name: air-fedora-166
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-167:
+    image: fedora:latest
+    container_name: air-fedora-167
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-168:
+    image: fedora:latest
+    container_name: air-fedora-168
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-169:
+    image: fedora:latest
+    container_name: air-fedora-169
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-170:
+    image: fedora:latest
+    container_name: air-fedora-170
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-171:
+    image: fedora:latest
+    container_name: air-fedora-171
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-172:
+    image: fedora:latest
+    container_name: air-fedora-172
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-173:
+    image: fedora:latest
+    container_name: air-fedora-173
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-174:
+    image: fedora:latest
+    container_name: air-fedora-174
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-175:
+    image: fedora:latest
+    container_name: air-fedora-175
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-176:
+    image: fedora:latest
+    container_name: air-fedora-176
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-177:
+    image: fedora:latest
+    container_name: air-fedora-177
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-178:
+    image: fedora:latest
+    container_name: air-fedora-178
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-179:
+    image: fedora:latest
+    container_name: air-fedora-179
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-180:
+    image: fedora:latest
+    container_name: air-fedora-180
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-181:
+    image: fedora:latest
+    container_name: air-fedora-181
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-182:
+    image: fedora:latest
+    container_name: air-fedora-182
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-183:
+    image: fedora:latest
+    container_name: air-fedora-183
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-184:
+    image: fedora:latest
+    container_name: air-fedora-184
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-185:
+    image: fedora:latest
+    container_name: air-fedora-185
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-186:
+    image: fedora:latest
+    container_name: air-fedora-186
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-187:
+    image: fedora:latest
+    container_name: air-fedora-187
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-188:
+    image: fedora:latest
+    container_name: air-fedora-188
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-189:
+    image: fedora:latest
+    container_name: air-fedora-189
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-190:
+    image: fedora:latest
+    container_name: air-fedora-190
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-191:
+    image: fedora:latest
+    container_name: air-fedora-191
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-192:
+    image: fedora:latest
+    container_name: air-fedora-192
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-193:
+    image: fedora:latest
+    container_name: air-fedora-193
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-194:
+    image: fedora:latest
+    container_name: air-fedora-194
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-195:
+    image: fedora:latest
+    container_name: air-fedora-195
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-196:
+    image: fedora:latest
+    container_name: air-fedora-196
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-197:
+    image: fedora:latest
+    container_name: air-fedora-197
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-198:
+    image: fedora:latest
+    container_name: air-fedora-198
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-199:
+    image: fedora:latest
+    container_name: air-fedora-199
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
+    
+  air-fedora-200:
+    image: fedora:latest
+    container_name: air-fedora-200
+    privileged: true
+    volumes:
+      - ./deploy.sh:/app/deploy.sh:ro
+      - ./.env.local:/app/.env.local:ro
+    command: /bin/bash /app/deploy.sh
+    restart: unless-stopped
