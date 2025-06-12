@@ -43,11 +43,11 @@ Perfect for PoVs, demos, research, development, testing, learning, and proof of 
    # Create .env.local file with your Binalyze AIR deployment URL
    cat > .env.local << EOF
    AIR:
-           RESPONDER_PACKAGE_URL: https://your-air-server.com/api/endpoints/download/deploy/linux?deployment-token=your-token
+      RESPONDER_PACKAGE_URL: https://your-air-server.com/api/endpoints/download/deploy/linux?deployment-token=your-token
    EOF
    ```
 
-2. **Start all services**
+2. **Start all services** (IMPORTANT: First execution will take time to pull the images)
    ```bash
    docker-compose up -d
    ```
@@ -61,24 +61,6 @@ Perfect for PoVs, demos, research, development, testing, learning, and proof of 
    ```bash
    docker-compose logs -f
    ```
-
-## Access Services
-
-**Web Services:**
-- Nginx: http://localhost:8080
-- Apache: http://localhost:8081
-- Tomcat: http://localhost:8082
-
-**Databases:**
-- PostgreSQL: localhost:5432
-- MongoDB: localhost:27017
-- Redis: localhost:6379
-- Cassandra: localhost:9042
-
-**Applications:**
-- RabbitMQ UI: http://localhost:15672
-- Nextcloud: http://localhost:8088
-- Ghost: http://localhost:8089
 
 ## Deployment Script Optimization
 
@@ -132,11 +114,11 @@ All containers use capitalized hostnames for easy identification:
 ## Data Persistence
 
 The following data persists across container restarts:
+- Binalyze AIR installation (automatically detected and preserved)
 - Database data (PostgreSQL, MongoDB, Redis, Cassandra)
 - Application data (Nextcloud, Ghost)
 - Web server content (Nginx, Apache, Tomcat)
 - Message queue data (RabbitMQ)
-- Binalyze AIR installation (automatically detected and preserved)
 
 ## Troubleshooting
 
