@@ -153,25 +153,7 @@ services:
     command: /bin/bash -c "bash /app/deploy.sh && catalina.sh run"
     restart: unless-stopped
         
-  # Databases    
-  mysql:
-    image: mysql:latest
-    container_name: mysql
-    hostname: MYSQL
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=airlab123
-      - MYSQL_DATABASE=airlab
-      - MYSQL_USER=airlab
-      - MYSQL_PASSWORD=airlab123
-    volumes:
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-      - mysql_data:/var/lib/mysql
-    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh mysqld"
-    restart: unless-stopped
-    
+  # Databases        
   postgres:
     image: postgres:latest
     container_name: postgres
@@ -255,79 +237,12 @@ services:
     command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh rabbitmq-server"
     restart: unless-stopped
             
-  # Monitoring & Logging    
-  grafana:
-    image: grafana/grafana:latest
-    container_name: grafana
-    hostname: GRAFANA
-    ports:
-      - "3000:3000"
-    environment:
-      - GF_SECURITY_ADMIN_USER=airlab
-      - GF_SECURITY_ADMIN_PASSWORD=airlab123
-    volumes:
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-      - grafana_data:/var/lib/grafana
-    command: /bin/bash -c "bash /app/deploy.sh && /run.sh"
-    restart: unless-stopped
-                 
-  # Enterprise Applications
-  nextcloud:
-    image: nextcloud:latest
-    container_name: nextcloud
-    hostname: NEXTCLOUD
-    ports:
-      - "8088:80"
-    environment:
-      - MYSQL_HOST=mysql
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=airlab
-      - MYSQL_PASSWORD=airlab123
-    volumes:
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-      - nextcloud_data:/var/www/html
-    command: /bin/bash -c "bash /app/deploy.sh && /entrypoint.sh apache2-foreground"
-    depends_on:
-      - mysql
-    restart: unless-stopped
-    
-  ghost:
-    image: ghost:latest
-    container_name: ghost
-    hostname: GHOST
-    ports:
-      - "8089:2368"
-    environment:
-      - database__client=mysql
-      - database__connection__host=mysql
-      - database__connection__user=airlab
-      - database__connection__password=airlab123
-      - database__connection__database=ghost
-      - url=http://localhost:8089
-    volumes:
-      - ./deploy.sh:/app/deploy.sh:ro
-      - ./.env.local:/app/.env.local:ro
-      - ghost_data:/var/lib/ghost/content
-    command: /bin/bash -c "bash /app/deploy.sh && docker-entrypoint.sh node current/index.js"
-    depends_on:
-      - mysql
-    restart: unless-stopped
-
 volumes:
   nginx_data:
   httpd_data:
   tomcat_data:
-  mysql_data:
   postgres_data:
   mongo_data:
   redis_data:
   cassandra_data:
   rabbitmq_data:
-  zookeeper_data:
-  prometheus_data:
-  grafana_data:
-  logstash_data:
-  nextcloud_data:
-  ghost_data:

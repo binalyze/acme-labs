@@ -5,6 +5,17 @@ set -e  # Exit on any error
 
 echo "Starting Binalyze AIR deployment on $(hostname) - $(cat /etc/os-release | grep PRETTY_NAME | cut -d'=' -f2 | tr -d '"')"
 
+# Check if Binalyze AIR is already installed
+if [ -f "/opt/binalyze/air/agent/air" ]; then
+    echo "✅ Starting Binalyze AIR Agent service"
+
+    # Start the Binalyze AIR Agent
+    service Binalyze.AIR.Agent start
+
+    # Keep the container alive
+    tail -f /dev/null
+fi
+
 # Function to read .env.local YAML file and extract RESPONDER_PACKAGE_URL from AIR section
 get_responder_package_url() {
     if [ ! -f "/app/.env.local" ]; then
