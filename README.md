@@ -4,8 +4,8 @@ A comprehensive Docker Compose environment for creating a multi-container lab se
 
 ## Overview
 
-This project provides a containerized lab environment with:
-- **10 Ubuntu Workstation containers** with Binalyze AIR agents for security testing and development
+This project provides a containerized lab environment with Binalyze AIR responders:
+- **10 Ubuntu Workstation containers** for security testing and development
 - **Web servers** for hosting applications and services
 - **Multiple database systems** for data storage and testing
 - **Message queuing** for distributed applications
@@ -16,7 +16,7 @@ Perfect for PoVs, demos, research, development, testing, learning, and proof of 
 ## Services
 
 ### Workstations (10 containers)
-- **workstation-1** to **workstation-10** - Ubuntu-based development environments with Binalyze AIR agents
+- **workstation-1** to **workstation-10** - Ubuntu-based workstations
 
 ### Web Servers
 - **nginx** - Web server (ports 8080, 8443)
