@@ -1,6 +1,6 @@
 # Binalyze AIR Lab Environment
 
-A Docker Compose environment for deploying and testing Binalyze AIR across multiple Linux distributions simultaneously. This lab environment creates 200 containers running different Linux distributions (Ubuntu, Debian, and Fedora) to test AIR deployment and functionality.
+A Docker Compose environment for deploying and testing Binalyze AIR across multiple Linux distributions simultaneously. This lab environment creates 200 containers running different Linux distributions (Ubuntu, Debian, CentOS, and Fedora) to test AIR deployment and functionality.
 
 ## Overview
 
