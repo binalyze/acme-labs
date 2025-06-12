@@ -1,6 +1,6 @@
 # AIR Lab Environment
 
-A comprehensive Docker Compose environment for creating a multi-container lab setup with workstations, servers, and applications powered by Binalyze AIR deployment automation.
+A comprehensive Docker Compose environment for creating a multi-container lab setup simulating workstations, servers, and business applications to test Binalyze AIR.
 
 ## Overview
 
@@ -11,7 +11,7 @@ This project provides a containerized lab environment with:
 - **Message queuing** for distributed applications
 - **Enterprise applications** for real-world scenarios
 
-Perfect for security research, development, testing, learning, and proof of concepts.
+Perfect for PoVs, demos, research, development, testing, learning, and proof of concepts.
 
 ## Services
 
@@ -79,12 +79,6 @@ Perfect for security research, development, testing, learning, and proof of conc
 - RabbitMQ UI: http://localhost:15672
 - Nextcloud: http://localhost:8088
 - Ghost: http://localhost:8089
-
-## Default Credentials
-
-Most services use:
-- **Username:** airlab
-- **Password:** airlab123
 
 ## Deployment Script Optimization
 
