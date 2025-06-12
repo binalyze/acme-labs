@@ -1,4 +1,4 @@
-# AIR Lab Environment
+# Binalyze ACME Labs
 
 A comprehensive Docker Compose environment for creating a multi-container lab setup simulating workstations, servers, and business applications to test Binalyze AIR.
 
